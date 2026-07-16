@@ -1,0 +1,85 @@
+name: Bug report
+description: Report a reproducible defect in a public ORKS repository.
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for the report. Do not include vulnerabilities, secrets,
+        private research material, personal data, or sensitive logs. Use the
+        repository Security tab for a vulnerability.
+  - type: input
+    id: repository
+    attributes:
+      label: Affected repository
+      description: Name the public ORKS repository where the defect occurs.
+      placeholder: orks-example
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Provide the release, tag, or commit when known.
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the defect and its impact concisely.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest sanitized sequence that reproduces the defect.
+      placeholder: |
+        1. Run ...
+        2. Provide synthetic input ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Relevant environment
+      description: Include only sanitized details needed to reproduce the issue.
+      placeholder: Operating system, architecture, runtime, and relevant configuration
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Add minimal redacted output or logs if they help explain the defect.
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Public-content confirmation
+      options:
+        - label: I searched existing issues for this defect.
+          required: true
+        - label: I removed secrets, private data, personal data, and sensitive logs.
+          required: true
+        - label: This report does not disclose a security vulnerability.
+          required: true
+        - label: I will follow the project Code of Conduct.
+          required: true

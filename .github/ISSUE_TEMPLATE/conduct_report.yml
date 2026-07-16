@@ -1,0 +1,28 @@
+name: Code of Conduct report
+description: Request a private contact path for a project conduct concern.
+title: "conduct: private contact request"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is public. Do not identify people or include incident
+        details, private messages, personal data, or other sensitive content.
+        The maintainer will provide a private contact path as capacity permits.
+        For abuse hosted on GitHub, also use GitHub's report-content tools.
+  - type: input
+    id: project_space
+    attributes:
+      label: Project space
+      description: Name only the affected repository or ORKS project space, if safe.
+      placeholder: Repository name or project space
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Public-content confirmation
+      options:
+        - label: I have not included names, incident details, private messages, or personal data.
+          required: true
+        - label: I understand this request is public and response timing is not guaranteed.
+          required: true
