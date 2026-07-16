@@ -1,0 +1,65 @@
+name: Feature proposal
+description: Propose an outcome or capability for a public ORKS repository.
+title: "feat: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem and intended outcome. Proposals are reviewed on a
+        best-effort basis and acceptance or scheduling is not guaranteed.
+  - type: input
+    id: repository
+    attributes:
+      label: Target repository
+      description: Name the public ORKS repository that would own the change.
+      placeholder: orks-example
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user need, interoperability gap, or risk should be addressed?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Intended outcome
+      description: What observable result would make the proposal successful?
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Possible approach
+      description: Describe an approach, alternatives, or tradeoffs if useful.
+    validations:
+      required: false
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and compatibility
+      description: Note affected contracts, repositories, formats, or migrations.
+    validations:
+      required: false
+  - type: textarea
+    id: effects
+    attributes:
+      label: Security, privacy, and resource effects
+      description: Identify relevant risks, public-data boundaries, or resource costs.
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues for a similar proposal.
+          required: true
+        - label: This proposal contains no secrets, private data, or vulnerability details.
+          required: true
+        - label: I will follow the project Code of Conduct.
+          required: true
