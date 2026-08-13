@@ -1,45 +1,38 @@
-# ORKS Organization Defaults Instructions
+---
+type: runtime-guidance
+title: .github - agent entry point
+description: Generated entry point for .github, part of ORKS (Open Research and Knowledge Standard). Roles: meta. Access: read-write.
+resource: .github/AGENTS.md
+generated: true
+authoritative: false
+derived_from: .orca/project-profile.md
+baseline_version: 0.23.0
+regenerate_with: the bootstrap capability
+edit: unsafe - regenerated, and edits fix nothing upstream
+---
 
-You are working in `.github`, the public organization-community repository for
-the Open Research and Knowledge Standard.
+# .github
 
-## Startup
+Part of **ORKS (Open Research and Knowledge Standard)**. Roles: `meta`.
+Access this session: **read-write**.
 
-1. Read the shared-parent `AGENTS.md`.
-2. Read this file.
-3. Read `orks-planning/sessions/current.md` and the active backlog contract.
-4. Check Git status for every repository mounted in the session.
-5. Identify the approved task and repository-local verification command before
-   changing files.
+The project profile is authoritative. It is held in a repository that is not
+public and is deliberately not named here; an agent working in this project
+resolves it through the runtime, not through this file. This file is generated and carries no rules of its own. It does **not** restate the full authority chain: this repository is public and the chain names repositories that are not. **A document not listed in the chain does not govern**, and the chain is read from the profile, not from here.
 
-## Authority and Ownership
+## Rules for this repository
 
-- `orks-planning` is the source of truth for accepted product decisions,
-  delivery state, risks, and repository boundaries.
-- This repository owns organization profile and community-health defaults,
-  contribution and DCO guidance, code of conduct, security and support policy,
-  and issue and pull-request templates.
-- Do not place normative ORKS standard text, project-specific build logic,
-  secrets, release artifacts, or private planning material here.
+Declared at `RULES.md`. Read it before changing anything here.
 
-## Work Rules
+## Authority chain
 
-- Treat every committed file as public and organization-wide unless GitHub
-  documents a narrower scope.
-- Keep governance and support language accurate for a solo maintainer. Do not
-  promise response times, funding, services, or teams that do not exist.
-- Direct vulnerability reports to GitHub private vulnerability reporting, not
-  public issues.
-- Do not add workflows, repository secrets, apps, webhooks, Pages, or external
-  service dependencies without explicit approval and security review.
-- Use ASCII unless a public policy document requires otherwise.
-- Preserve third-party attribution and licensing.
-- Sign public commits under Developer Certificate of Origin 1.1.
-- Do not load Directus, `pc-standards`, ProbablyComputers project authority,
-  unrelated repositories, host-global MCP servers, plugins, apps, or agents.
+| # | Repository | Path | Owns |
+|---|---|---|---|
+| 12 | `orks-standard` | `RULES.md` | `orks-standard`'s own rules |
+| 13 | `orks-conformance` | `RULES.md` | `orks-conformance`'s own rules |
+| 14 | `.github` | `RULES.md` | `.github`'s own rules |
 
-## Closeout
-
-Run the repository-local documentation validator and `git diff --check`,
-inspect the public diff for secrets and private content, update the ORKS
-planning handoff, and follow the planning repository's session-end runbook.
+**11 entries are withheld** - they name repositories that are not
+public, and this file is. The count is stated rather than the names: a reader
+outside cannot act on them, and a short chain and a filtered one must not look
+alike. An agent inside the project reads the full chain from the profile.
