@@ -1,7 +1,7 @@
 # ORKS Organization Defaults Instructions
 
 You are working in `.github`, the public organization-community repository for
-the Open Research and Knowledge Standard.
+the Open Research & Knowledge System.
 
 ## Authority and Ownership
 
