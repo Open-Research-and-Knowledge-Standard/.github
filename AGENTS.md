@@ -1,7 +1,7 @@
 ---
 type: runtime-guidance
 title: .github - agent entry point
-description: Generated entry point for .github, part of ORKS (Open Research and Knowledge Standard). Roles: meta. Access: read-write.
+description: Generated entry point for .github, part of ORKS (Open Research & Knowledge System). Roles: meta. Access: read-write.
 resource: .github/AGENTS.md
 generated: true
 authoritative: false
@@ -13,7 +13,7 @@ edit: unsafe - regenerated, and edits fix nothing upstream
 
 # .github
 
-Part of **ORKS (Open Research and Knowledge Standard)**. Roles: `meta`.
+Part of **ORKS (Open Research & Knowledge System)**. Roles: `meta`.
 Access this session: **read-write**.
 
 The project profile is authoritative. It is held in a repository that is not
